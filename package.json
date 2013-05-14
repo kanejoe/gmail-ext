@@ -1,7 +1,7 @@
 {
   "name": "Gmail Test Extension",
   "version": "0.1",
-  "description": "An extension to test the features of Gmailr.",
+  "description": "An extension to test the features of gmail.",
   "content_scripts": [
     {
       "matches": ["https://mail.google.com/*", "http://mail.google.com/*"],
