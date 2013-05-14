@@ -12,10 +12,13 @@
 	"content_scripts" : [{
 		"matches" : [
 			"http://*/*",
-			"https://*/*"
+			"https://*/*",
+			"http://mail.google.com/*",
+			"https://mail.google.com/"
+			//"tabs"
 		],
 		"js" : ["contentscript.js"],
-		"run_at" : "document_idle",
+		"run_at" : "document_idle", 
 		"all_frames" : false
     }],
 	"icons" : {
