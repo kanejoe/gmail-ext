@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+  <moduleprefs title="Hello World" description="find and display 'Hello World' string in emails" height="20" author="you name" author_email="your email" author_location="your loction ,address">
+ 
+    <require feature="dynamic-height">
+    <require feature="google.contentmatch">
+      <param name="extractors">
+        google.com:HelloWorld
+       
+    </require>
+  </require></moduleprefs>
+  <content type="html" view="card">
+      <script type="text/javascript">
+ 
+        <!-- Fetch the array of content matches. -->
+        matches = google.contentmatch.getContentMatches();
+        var matchList = document.createElement('UL');
+        var listItem;
+        var extractedText;
+ 
+        <!-- Iterate through the array and display output for each match. -->
+        for (var match in matches) {
+          for (var key in matches[match]) {
+            listItem = document.createElement('LI');
+            extractedText = document.createTextNode(key + " -:- " + matches[match][key]);
+            listItem.appendChild(extractedText);
+            matchList.appendChild(listItem);
+          }
+        }
+        document.body.appendChild(matchList);
+        gadgets.window.adjustHeight(200);
+      </script>
+  </content>
+</module>

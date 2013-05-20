@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+  <ModulePrefs title="Form Inside Gadget"/> 
+  <Content type="html">
+  <![CDATA[
+     <script type="text/javascript">
+			function showDetails(form)
+			{
+				var displayArea=document.getElementById("content");
+				displayArea.innerHTML="Name :"+form.urname.value+"<br/>Country :"+form.country.value;
+			}
+     </script>
+<div id="content"></div>
+<p>&nbsp;</p>
+	<form name="myform" action="GET">
+			Your Name : <input type="text" name="urname" /><br/>
+			Country: <select name="country"><option>India</option><option>UK</option><option>USA</option></select><br/>
+			<input type="button" onClick="showDetails(this.form)" value="Show"/>
+	</form>
+     
+  ]]>
+  </Content>
+</Module>
