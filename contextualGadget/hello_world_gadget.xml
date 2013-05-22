@@ -53,7 +53,7 @@
           }
         }
         document.body.appendChild(matchList);
-        document.body.appendChild("hello");
+        document.body.appendChild("hello now 22 May");
         gadgets.window.adjustHeight(100);
       </script>
     ]]>
